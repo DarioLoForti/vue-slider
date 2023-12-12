@@ -27,6 +27,7 @@
                     </div>
                 </div>
 
+                <!-- {{ autoPlay() }} -->
                 <div class="thumbs">
                     <div class="prev" @click="prevImage"></div>
                     <div class="next" @click="nextImage"></div>
@@ -34,10 +35,14 @@
                         :class="currentImage === index ? 'active' : ''"
                         v-for="(slide, index) in slides" 
                         :src="`./${slide.image}`" 
-                        alt="Svezia" 
+                        alt="" 
                         @click="changeImage(index)">
                 </div>
-
+                <div class="play">
+                    <button class="start" @click="start">start</button>
+                    <button class="pausa" @click="pausa">pausa</button>
+                    <button class="stop" @click="stop">stop</button>
+                </div>
             </div>
         </div>
 

@@ -3,7 +3,7 @@ const {createApp} = Vue;
 createApp({
     data(){
         return{
-
+            autoplay: null,
             currentImage: 0,
 
             slides: [
@@ -53,8 +53,23 @@ createApp({
 
         changeImage(index){
             this.currentImage = index;
-        }
+        },
 
+        start(){
+            this.autoplay = setInterval(() => {
+                this.nextImage()
+            },3000);
+        },
+        pausa(){
+           clearInterval(this.autoplay);
+           this.autoplay = null;
+        },
+        stop(){
+            this.pausa();
+            this.currentImage = 0;
+        }
+        
+        
         
     },
 }).mount("#app");
