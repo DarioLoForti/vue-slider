@@ -34,7 +34,8 @@
                         :class="currentImage === index ? 'active' : ''"
                         v-for="(slide, index) in slides" 
                         :src="`./${slide.image}`" 
-                        alt="Svezia" >
+                        alt="Svezia" 
+                        @click="changeImage(index)">
                 </div>
 
             </div>

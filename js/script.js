@@ -44,13 +44,17 @@ createApp({
 
         prevImage(){
             if(this.currentImage == 0){
-                this.currentImage = this.slides.length;
+                this.currentImage = this.slides.length - 1;
             }
             else{
                 this.currentImage--;
             }
         },
-        
+
+        changeImage(index){
+            this.currentImage = index;
+        }
+
         
     },
 }).mount("#app");
