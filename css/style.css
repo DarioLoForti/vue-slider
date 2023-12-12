@@ -37,10 +37,13 @@
     height: 300px;
     background: #000;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    
 }
 
 .thumb {
-    height: calc((300px) / 5);
+    height: calc(300px / 5);
     opacity: 0.5;
 }
 
@@ -51,7 +54,7 @@
 }
 
 .thumb.active {
-    border: 2px solid #ccc;
+    border: 2px solid #1522d4;
     opacity: 1;
 }
 
@@ -78,6 +81,7 @@ usando 2 bordi di un quadratino ruotato di 45 gradi
 In una versione base si possono usare delle icone
 oppure i caratteri ∧ (&and;) e ∨ (&or;)
  */
+
 .prev::after {
     content: '';
     width: 10px;
