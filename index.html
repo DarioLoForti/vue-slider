@@ -16,7 +16,7 @@
         <div class="container">
             <div class="slider-wrapper" tabindex="0">
 
-                <div class="item">
+                <div class="item" @mouseover="pausa" @mouseleave="start">
                     <img :src="`./${slides[currentImage].image}`" alt="Spiderman" />
                     <div class="text">
                         <h3>{{`${slides[currentImage].title}`}}
@@ -27,7 +27,6 @@
                     </div>
                 </div>
 
-                <!-- {{ autoPlay() }} -->
                 <div class="thumbs">
                     <div class="prev" @click="prevImage"></div>
                     <div class="next" @click="nextImage"></div>
